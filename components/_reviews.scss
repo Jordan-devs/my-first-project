@@ -1,0 +1,86 @@
+@import "variables";
+
+.client {
+  margin: 2em;
+  h1 {
+    font-size: 4em;
+    transform: translateY(-50px);
+    text-align: right;
+    margin-right: 1em;
+    font-weight: normal;
+    color: white;
+
+    span {
+      background: theme(colors, label-color);
+    }
+  }
+
+  .card-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .cards {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+
+      .card {
+        background: theme(colors, card);
+        margin: 1em;
+        padding: 2em;
+        padding-right: 6em;
+
+        .card-info {
+          width: 200px;
+          line-height: 1.5;
+          color: theme(colors, p-2);
+          font-family: $primary-font;
+        }
+
+        .cover {
+          display: flex;
+          align-items: center;
+
+          .card-img {
+            width: 50px;
+            height: 50px;
+            border-radius: 100px;
+            margin-right: 1.2em;
+          }
+
+          .card-img-one {
+            background: url(Images/clients/alex-mccarthy-RGKdWJOUFH0-unsplash.jpg)
+              $bg-image;
+          }
+
+          .card-img-two {
+            background: url(Images/clients/ali-morshedlou-WMD64tMfc4k-unsplash.jpg)
+              $bg-image;
+          }
+
+          .card-img-three {
+            background: url(Images/clients/nasik-lababan-AY2dgFfdqVk-unsplash.jpg)
+              $bg-image;
+          }
+
+          .content {
+            color: white;
+          }
+
+          .content p {
+            font-family: $primary-font;
+            font-weight: normal;
+          }
+
+          h4 {
+            line-height: 1.2;
+            font-size: 1.2em;
+            font-weight: normal;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,26 @@
+$main-font: "Playfair", sans-serif;
+$primary-font: "Roboto", sans-serif;
+$bg-image: no-repeat center/cover;
+
+$theme: (
+  colors: (
+    gradient-color: linear-gradient(to left, #35d085, #e32e64),
+    nav-color: linear-gradient(to right, hsl(278, 37%, 28%), hsl(277, 29%, 54%)),
+    label-color: #ae81bf64,
+    header: #ae81bf,
+    background-color: #211f22,
+    white: hsl(0, 0%, 100%),
+    p: #e8d4ef,
+    card: hsl(280, 11%, 16%),
+    p-2: hsl(0, 0%, 77%),
+  ),
+);
+
+@function theme($key, $property) {
+  @return map-get(map-get($theme, $key), $property);
+}
+
+@function has-theme($key, $property, $result) {
+  $real: map-get(map-get($theme, $key), $property);
+  @return $real == $result;
+}
